@@ -68,3 +68,27 @@ css: home
 		</div>
 	</div>
 </div>
+
+<div id="companies" class="copy-protect">
+	<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<h2 style="text-align: center">
+					Top Recruiters
+				</h2>
+			</div>
+		</div>
+		<div class="row center-all" style="flex-wrap: wrap">
+			{% for company in site.data.companies.top-compaines %}
+				<div class="col s6 m4" style="margin-bottom: 5vw">
+					<div class="container">
+						<h3 class="hide">
+							{{company.name}} recruited from UPCJMI
+						</h3>
+						<img src="/assets/images/top-companies/{{company.image}}" class="responsive-img" alt="{{company.name}} - Jamia Millia Isalmia's Top Recruiter">
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>

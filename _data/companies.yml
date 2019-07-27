@@ -1,0 +1,13 @@
+top-compaines:
+    - name: Adobe
+      image: Adobe.png
+    - name: OYO
+      image: OYO.png
+    - name: Samsung
+      image: Samsung.png
+    - name: TCS
+      image: TCS.png
+    - name: L&T
+      image: L&T.png
+    - name: innovaccer
+      image: innovaccer.png
