@@ -1,0 +1,40 @@
+$gold: #E1A40F;
+$bg: black;
+
+#why-recruit{
+    color: $gold;
+    background-color: $bg;
+}
+
+#why-recruit h2{
+    color: $gold;
+    text-align: center;
+}
+
+#why-recruit a{
+    color: $gold;
+}
+
+#send-proposal{
+    background-color: $gold;
+    font-size: 1.75rem;
+    font-weight: 700;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 200px;
+    color: black !important;
+}
+
+#send-recruit-proposal-btn{
+    background-color: $gold;
+    border-radius: 500px;
+    padding: 10px;
+
+}
+
+#send-recruit-proposal-btn a{
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 700;
+}

@@ -7,9 +7,6 @@
     font-family: 'Nunito', sans-serif;
 }
 
-body {
-}
-
 b {
     font-weight: 700;
 }
@@ -43,8 +40,8 @@ b.semi {
     height: 100%;
 }
 
-.paddingtb {
-    padding-top: 5vh;
+.section {
+    padding-top: 80px;
     padding-bottom: 5vh;
 }
 
@@ -66,8 +63,9 @@ b.semi {
 h1,
 h2,
 h3 {
-    font-weight: 900;
+    font-weight: 700;
     color: black;
+    font-family: 'Tienne', serif;
 }
 
 @media only screen and (max-width : 601px) {
@@ -77,7 +75,6 @@ h3 {
     h3 {
         text-align: center;
     }
-
 }
 
 .carousel-slider{
