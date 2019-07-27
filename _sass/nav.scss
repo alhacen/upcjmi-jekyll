@@ -1,22 +1,24 @@
 $bg-color: #fff;
-$height: 65px;
+$height: 50;
 
 header {
     position: fixed;
-    margin-top: 20px;
+    top: 10px;
     width: 100vw;
 }
 nav {
     opacity: 0.90;
     background-color: $bg-color;
-    height: $height;
-    border-radius: #{$height/2};;
+    height: #{$height}px;
+    border-radius: #{$height}px;;
     margin-top: 20px !important;
     color: #000;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: #{$height/2};
+    padding-left: #{$height/2}px;
+    line-height: #{$height}px;
+
 }
 nav .brand-logo {
     padding-left: 25px;
@@ -24,15 +26,20 @@ nav .brand-logo {
 }
 nav ul a, li {
     color: black !important;
-    height: $height;
+    height: #{$height}px;
+    display: table-cell;
+    vertical-align: middle;
+}
+nav ul li p {
+    color: black !important;
+    height: #{$height}px;
     display: table-cell;
     vertical-align: middle;
 }
 .brand-logo {
-    font-size: 34 !important;
-    margin-top: -1.5px;
+    font-size: 25px !important;
 }
 .last-nav-link {
-    border-top-right-radius: #{$height/2};
-    border-bottom-right-radius: #{$height/2};
+    border-top-right-radius: #{$height}px;
+    border-bottom-right-radius: #{$height}px;
 }

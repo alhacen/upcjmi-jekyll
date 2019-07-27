@@ -3,6 +3,21 @@ layout: default
 title: UPCJMI welcomes you
 css: home
 ---
+
+
+<div id="carosusel">
+	<div class="carousel carousel-slider" style="position:absolute;">
+		<a class="carousel-item" href="#one!" style=""><div class="bg_img" style="background-image: url('/assets/images/carosusel/bg1.jpg');"></div></a>
+		<a class="carousel-item" href="#one!"><div class="bg_img" style="background-image: url('/assets/images/carosusel/bg1.jpg');"></div></a>
+	</div>
+	<div style="height:100vh;width:80%;margin-left:auto;margin-right:auto;z-index:1;position:relative">
+		<div style="position:absolute;vertical-align: middle;top: 50%; transform: translateY(-50%);"><h1 style="color:white">Welcome to<br>University Placement Cell</h1></div>
+		<div class="row" style="position:absolute;color:white;bottom:10px;padding-left:50px;text-align:center"><div class="col"><a href="#" class="btn-flat white black-text btn-large header_btn" style="font-weight: 700">JOB READINESS PROGRAM</a> </div><div class="col"><a href="#" class="btn-flat white black-text btn-large header_btn" style="font-weight: 700">RESUME BUILDER</a> </div></div>
+	</div>
+	<div style="position:absolute;vertical-align: middle;top: 50%; width:100%;z-index:0;transform: translateY(-50%);height:100vh;background: linear-gradient(to left,rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%); mix-blend-mode: multiply">
+	</div>
+</div>
+
 <div id="about-us" class="copy-protect paddingtb">
 	<div class="container">
 		<div class="row">
@@ -69,7 +84,7 @@ css: home
 	</div>
 </div>
 
-<div id="companies" class="copy-protect">
+<div id="recruit" class="copy-protect">
 	<div class="container">
 		<div class="row">
 			<div class="col s12">
@@ -92,3 +107,16 @@ css: home
 		</div>
 	</div>
 </div>
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		var elems = document.querySelectorAll('.carousel');
+		var instances = M.Carousel.init(elems,{
+			fullWidth: true
+		});
+		setInterval(function(){
+			M.Carousel.getInstance(document.querySelector('.carousel')).next();
+		}, 3000);
+		
+	});
+
+</script>

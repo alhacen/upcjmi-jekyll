@@ -7,6 +7,9 @@
     font-family: 'Nunito', sans-serif;
 }
 
+body {
+}
+
 b {
     font-weight: 700;
 }
@@ -75,4 +78,17 @@ h3 {
         text-align: center;
     }
 
+}
+
+.carousel-slider{
+    height:100vh !important
+}
+.bg_img{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height:100vh;
+}
+@media screen and (max-width: 600px) {
+    .header_btn{width:100% !important}
 }
