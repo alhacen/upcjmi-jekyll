@@ -1,0 +1,27 @@
+$bg-color: #eeeeee;
+$font-size: 1.2rem;
+$font-color: #666666;
+
+#about-us{
+    background-color: $bg-color;
+    font-size: $font-size;
+    color: $font-color;
+    text-align: justify;
+}
+
+#about-us img{
+    max-height: 200px !important;
+}
+
+#about-jamia {
+    flex-wrap: wrap-reverse;
+}
+
+#about-jamia-content {
+    text-align: justify;
+}
+
+#tpo-message{
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
