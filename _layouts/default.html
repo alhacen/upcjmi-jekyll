@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{page.title}} || Univerity Placement Cell, Jamia Millia Islamia </title>
+    <meta name="description" content="{{page.description}}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+    {% if page.css %}
+    <link rel="stylesheet" href="/assets/css/{{page.css}}.css">
+    {% endif %}
+
+    <meta name="robots" content="index, follow">
+</head>
+
+<body>
+    <header>
+        <nav>
+            Nav Bar Goes here
+        </nav>
+    </header>
+    <main>
+        {{page.content}}
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>
