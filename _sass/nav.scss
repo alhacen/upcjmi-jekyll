@@ -43,3 +43,5 @@ nav ul li p {
     border-top-right-radius: #{$height}px;
     border-bottom-right-radius: #{$height}px;
 }
+.logo a:hover{background-color:#ffffff00 !important;}
+.logo a{display: flex; justify-content:center; align-content:center; flex-direction:column;}
