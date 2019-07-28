@@ -45,7 +45,6 @@ b.semi {
     padding-bottom: 5vh;
 }
 
-
 .copy-protect {
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -58,7 +57,6 @@ b.semi {
 .copy-protect img {
     pointer-events: none;
 }
-
 
 h1,
 h2,
@@ -77,15 +75,24 @@ h3 {
     }
 }
 
-.carousel-slider{
-    height:100vh !important
+.button {
+    padding: 10px 15px;
+    font-weight: 400;
+    margin: 10px;
+    display: inline-block;
+    text-align: center;
 }
-.bg_img{
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height:100vh;
+.button a{
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-transform: uppercase;
 }
-@media screen and (max-width: 600px) {
-    .header_btn{width:100% !important}
+
+
+@media screen and (max-width: 601px) {
+    .button{
+        width:100% !important;
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
