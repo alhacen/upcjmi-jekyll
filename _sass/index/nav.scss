@@ -6,19 +6,21 @@ header {
     top: 10px;
     width: 100vw;
 }
-nav {
-    opacity: 0.90;
-    background-color: $bg-color;
-    height: #{$height}px;
-    border-radius: #{$height}px;;
-    margin-top: 20px !important;
-    color: #000;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: #{$height/2}px;
-    line-height: #{$height}px;
+@media screen and (min-width: 892px) {
+    nav {
+        opacity: 0.90;
+        background-color: $bg-color;
+        height: #{$height}px;
+        border-radius: #{$height}px;;
+        margin-top: 20px !important;
+        color: #000;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: #{$height/2}px;
+        line-height: #{$height}px;
 
+    }
 }
 nav .brand-logo {
     padding-left: 25px;
@@ -43,5 +45,23 @@ nav ul li p {
     border-top-right-radius: #{$height}px;
     border-bottom-right-radius: #{$height}px;
 }
-.logo a:hover{background-color:#ffffff00 !important;}
-.logo a{display: flex; justify-content:center; align-content:center; flex-direction:column;}
+.logo a:hover {
+    background-color: #ffffff00 !important;
+}
+
+.logo a {
+    display:  flex;
+     justify-content: center;
+     align-content: center;
+     flex-direction: column;
+}
+
+#mobile_nav_links {
+    z-index: -1;
+    align-items:  stretch;
+    height: 56px !important;
+    text-align:  center;
+    position:  fixed;
+    top: 56px;
+    transition:  top 0.3s;
+}
