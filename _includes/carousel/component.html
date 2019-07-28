@@ -1,0 +1,9 @@
+<div id="carosusel">
+    <div class="carousel carousel-slider" style="position:absolute;height: {{site.data.carousels[page.carousel].height}}vp">
+        {% for carousel in site.data.carousels[page.carousel].images %}
+        <span class="carousel-item">
+            <div class="bg-img" style="background-image: url('/assets/images/carosusel/{{carousel}}');"></div>
+        </span>
+        {% endfor %}
+    </div>
+</div>

@@ -1,5 +1,8 @@
 ---
 ---
+@import 'nav';
+@import 'index/landing';
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,7 +14,7 @@ html {
     overflow-x: hidden;
 }
 
-b {
+b, strong {
     font-weight: 700;
     color: black;
 }
@@ -48,6 +51,13 @@ b.semi {
 .section {
     padding-top: 80px;
     padding-bottom: 5vh;
+}
+
+.main-content p {
+    text-align: justify;
+}
+.main-content {
+    font-size: 1.2em;
 }
 
 .copy-protect {
@@ -103,6 +113,13 @@ h3 {
     font-weight: 700;
     font-size: 1.25rem;
     text-transform: uppercase;
+}
+
+.bg-img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
 }
 
 @media only screen and (max-width : 601px) {

@@ -1,102 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{page.title}} || Univerity Placement Cell, Jamia Millia Islamia </title>
-    <meta name="description" content="{{page.description}}">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Tienne:900&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="/assets/css/styles.css">
-
-    {% if page.css %}
-    <link rel="stylesheet" href="/assets/css/{{page.css}}.css">
-    {% endif %}
-
-    <meta name="robots" content="index, follow">
+    {% include head.html %}
 </head>
 
 <body>
-    <header style="z-index:2;top:0 !important">
-        <nav class="white hide-on-large-only" id="mobile_nav" style="box-shadow: 0 0 0 0 rgba(0,0,0,0);">
-            <div class=" col">
-                <div class="black-text center ">
-                    <div class="row">
-                        <div class="col s12">
-                            <div class="center-all copy-protect" style="text-align: cente;">
-                                <img src="/assets/images/jamia-logo.png" style="height: 40px;margin: 10px">
-                                <b>University Placement Cell</b>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="center-all copy-protect white" id="mobile_nav_links">
-                <ul >
-                    <li><a href="#recruit" >Recruit</a></li>
-                    <li><p>|</p></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><p>|</p></li>
-                    <li><a href="#about-us">About us &nbsp; &nbsp; </a></li>
-                </ul>
-            </div>
-            
-        </nav>
-        <nav class="nav_bar white hide-on-med-and-down" >
-            <div class="nav-wrapper">                   
-                    <ul class="logo">
-                            <li><a  href="#" style=""><img src="/assets/images/jamia-logo.png" style="" height="40px"> </a></li>
-                            <li><a href="#" class="brand-logo hide-on-med-and-down" style="padding:0">
-                                <b>
-                                        University Placement Cell
-                                </b>
-                                </a></li>
-                            </ul>             
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="#recruit">Recruit</a></li>
-                    <li>
-                        <p>|</p>
-                    </li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li>|</li>
-                    <li><a class="last-nav-link" href="#about-us">About us &nbsp; &nbsp; </a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main>
-        {{content}}
-    </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.carousel');
-            var instances = M.Carousel.init(elems, {
-                fullWidth: true,
-                duration: 300
-            });
-            setInterval(function () {
-                M.Carousel.getInstance(document.querySelector('.carousel')).next();
-            }, 5000);
-    
-        });
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function() {
-            var currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-                document.getElementById("mobile_nav_links").style.top = "56px";
-            } else {
-                document.getElementById("mobile_nav_links").style.top = "-56px";
-            }
-            prevScrollpos = currentScrollPos;
-        }
-    </script>
+{% include nav/component.html %}
+<main>
+{{content}}
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+{% include nav/nav.js %}
+{% include carousel/carousel.js %}
+</script>
 </body>
 </html>
