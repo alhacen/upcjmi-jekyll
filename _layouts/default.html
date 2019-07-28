@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
 
     {% if page.css %}
-        <link rel="stylesheet" href="/assets/css/{{page.css}}.css">
+    <link rel="stylesheet" href="/assets/css/{{page.css}}.css">
     {% endif %}
 
     <meta name="robots" content="index, follow">
@@ -60,7 +60,9 @@
                             </ul>             
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="#recruit">Recruit</a></li>
-                    <li><p>|</p></li>
+                    <li>
+                        <p>|</p>
+                    </li>
                     <li><a href="#contact">Contact</a></li>
                     <li>|</li>
                     <li><a class="last-nav-link" href="#about-us">About us &nbsp; &nbsp; </a></li>
@@ -71,9 +73,9 @@
     <main>
         {{content}}
     </main>
-</body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
         document.addEventListener('DOMContentLoaded', function () {
             var elems = document.querySelectorAll('.carousel');
             var instances = M.Carousel.init(elems, {
@@ -96,4 +98,5 @@
             prevScrollpos = currentScrollPos;
         }
     </script>
+</body>
 </html>

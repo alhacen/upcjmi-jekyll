@@ -1,0 +1,9 @@
+{
+    "name": "University Placement Cell, Jamia Millia Islamia",
+    "short_name": "upcjmi",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "orientation": "portrait",
+    "theme_color": "#ffffff",
+    "gcm_sender_id": "836782489741"
+}
