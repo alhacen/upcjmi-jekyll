@@ -70,13 +70,24 @@ h3 {
     font-family: 'Tienne', serif;
 }
 
-@media only screen and (max-width : 601px) {
+h1{
+    font-size: 3.5rem !important;
+}
+h2 {
+    font-size: 3rem !important;
+}
+h3 {
+    font-size: 2rem !important;
+}
+.with-sub-heading{
+    display: inline-block;
+    line-height: 1;
+}
 
-    h1,
-    h2,
-    h3 {
-        text-align: center;
-    }
+.with-sub-heading span{
+    font-size: 1.75rem;
+    color: #6AFF00;
+    font-weight: 700;
 }
 
 .button {
@@ -86,10 +97,20 @@ h3 {
     display: inline-block;
     text-align: center;
 }
+
 .button a{
     font-weight: 700;
     font-size: 1.25rem;
     text-transform: uppercase;
+}
+
+@media only screen and (max-width : 601px) {
+
+    h1,
+    h2,
+    h3 {
+        text-align: center;
+    }
 }
 
 
@@ -98,5 +119,14 @@ h3 {
         width:100% !important;
         margin-left: 0;
         margin-right: 0;
+    }
+
+    .with-sub-heading span{
+        font-size: 1.75rem;
+    }
+}
+@media screen and (min-width: 601px) {
+    .with-sub-heading span{
+        float: right;
     }
 }

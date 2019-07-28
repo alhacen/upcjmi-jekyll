@@ -19,7 +19,7 @@
     position: absolute;
     width: 100%;
     min-height: 100%;
-    background-color: #e453;
+    background-image: linear-gradient(153deg, rgba(0,0,0,0.75) 0%, rgba(58,17,147,0.75) 95%);
     top: 0;
     left: 0;
 }
@@ -40,7 +40,7 @@
 }
 
 @media screen and (max-width: 601px) {
-    .header_btn {
-        width: 100% !important
+    .content {
+        text-align: center;
     }
 }
