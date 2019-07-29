@@ -15,6 +15,11 @@ $bg: black;
     color: $gold;
 }
 
+#know-more-why-recruit:hover a{
+    text-decoration: underline;
+    color: gold !important;
+}
+
 #send-proposal{
     background-color: $gold;
     font-size: 1.75rem;
@@ -30,7 +35,11 @@ $bg: black;
     background-color: $gold;
     border-radius: 500px;
     padding: 10px;
-
+    transition: 0.3s;
+}
+#send-recruit-proposal-btn:hover{
+    transform: scale(1.25, 1.25);
+    background-color: gold;
 }
 
 #send-recruit-proposal-btn a{

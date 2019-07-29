@@ -11,19 +11,28 @@ carousel: index
 		<div id="carosusel">
 			<div class="carousel carousel-slider" style="position:absolute;min-height: 100vh;">
 				<span class="carousel-item">
-					<div class="bg-img" style="background-image: url('/assets/images/carousel/bg1.jpg');"></div>
+					<div class="bg-img" style="background-image: url('/assets/images/carousel/index/bg1.jpg');"></div>
 				</span>
 				<span class="carousel-item">
-						<div class="bg-img" style="background-image: url('/assets/images/carousel/bg1.jpg');"></div>
-					</span>
+					<div class="bg-img" style="background-image: url('/assets/images/carousel/index/bg2.jpg');"></div>
+				</span>
+				<span class="carousel-item">
+					<div class="bg-img" style="background-image: url('/assets/images/carousel/index/bg3.jpg');"></div>
+				</span>
+				<span class="carousel-item">
+					<div class="bg-img" style="background-image: url('/assets/images/carousel/index/bg4.jpg');"></div>
+				</span>
+				<span class="carousel-item">
+					<div class="bg-img" style="background-image: url('/assets/images/carousel/index/bg5.jpg');"></div>
+				</span>
 			</div>
 		</div>
 		<div class="content">
 			<div style="height: 20px"></div>
 			<div class="container">
-				<span class="welcome grey-text text-lighten-4">
+				<div class="welcome white-text">
 					Welcome to
-				</span>
+				</div>
 				<h1 class="white-text with-sub-heading">
 					University Placement Cell <br>
 					<span>
@@ -33,12 +42,12 @@ carousel: index
 			</div>
 			<div class="container">
 				<div href="#!" class="button white">
-					<a href="#!" class="black-text">
+					<a href="/register/job-rediness-program/" class="black-text">
 						JOB READINESS PROGRAM
 					</a>
 				</div>
 				<div href="#!" class="button white">
-					<a href="#!" class="black-text">
+					<a href="https://pfrepo.me/" target="_blank" class="black-text">
 						RESUME BUILDER
 					</a>
 				</div>
@@ -57,7 +66,6 @@ carousel: index
 				</h2>
 			</div>
 		</div>
-
 		<div class="row center-all" id="about-jamia">
 			<div class="col s12 m8 l8" id="about-jamia-content">
 				<b style="font-size: 2rem">
@@ -169,8 +177,8 @@ carousel: index
 			{% endfor %}
 		</div>
 		<div class="row">
-			<div class="col s12 m6 l4 center push-l4 push-m3" id="send-recruit-proposal-btn">
-				<a href="#!">
+			<div class="col s12 m6 l4 button center push-l4 push-m3" id="send-recruit-proposal-btn">
+				<a href="mailto:rsuri@jmi.ac.in">
 					SEND US PROPOSAL
 				</a>
 			</div>
@@ -184,36 +192,173 @@ carousel: index
 		</div>
 	</div>
 </div>
-<div class="row container" id="contact">
-	<div class="col s10 l4" >
-		<h4>Contact us</h4>
-		<div class="card" id="contact1" style="border-radius:20px;height:130px">
-			<div style="padding:0px 0px 0px 15px">
-				<h4 style="margin-bottom:0px;font-weight:600">Rehan Khan Suri</h4>
-				<span style="font-size:12px"><b>Training and placement Officer</b></span>
-				<p style="margin-bottom:0px;display:inline-block" class="center-all"><b><span><img src="/assets/images/icons/email.png" style="height:12px;margin-right:10px"></span>rsuri@jmi.ac.in</b></p>
-				<p style="margin-top:0px;display:inline-block" class="center-all"><b><span><img src="/assets/images/icons/whatsapp.png" style="height:15px;margin-right:10px"></span>+91 &nbsp;98100 36980</b></p>
+
+<!-- <div class="row container" id="contact">
+	<div class="col s10 l5">
+		<h2>Contact us</h2>
+		<div class="card contact">
+			<div>
+				<div class="name">Rehan Khan Suri</div>
+				<b>
+					Training and placement Officer
+				</b>
+				<br><br>
+				<p class="center-all">
+					<img src="/assets/images/icons/email.png" style="height:12px;margin-right:10px">
+					<b>
+						rsuri@jmi.ac.in
+					</b>
+				</p>
+				<p class="center-all">
+					<img src="/assets/images/icons/whatsapp.png" style="height:15px;margin-right:10px">
+					<b>
+						+91 xxxxx 36980
+					</b>
+				</p>
 			</div>
-			<div class="card" style="height:120px;width:120px;border-radius:100px;position:absolute;top:-0px;right:-10vh;background-image: url('http://localhost:4000/assets/images/rihan-khan-suri-tpo-jamia-miilia-islamia.png');background-size: contain;background-position: center;background-repeat: no-repeat;">
+			<div class=""
+				style="height:120px;width:120px;border-radius:100px;position:absolute;top:-0px;right:-10vh;background-image: url('http://localhost:4000/assets/images/rihan-khan-suri-tpo-jamia-miilia-islamia.png');background-size: contain;background-position: center;background-repeat: no-repeat;">
 			</div>
 		</div>
-		<div class="card" id="contact2" style="border-radius:20px;height:130px">
-			<div style="padding:0px 0px 0px 15px">
-				<h4 style="margin-bottom:0px;font-weight:600">Rehan Khan Suri</h4>
-				<span style="font-size:12px;"><b>Training and placement Officer</b></span>
-				<p style="margin-bottom:0px;display:inline-block" class="center-all"><b><span><img src="/assets/images/icons/email.png" style="height:12px;margin-right:10px"></span>rsuri@jmi.ac.in</b></p>
-				<p style="margin-top:0px;display:inline-block" class="center-all"><b><span><img src="/assets/images/icons/whatsapp.png" style="height:15px;margin-right:10px"></span>+91 &nbsp;98100 36980</b></p>
+		{% for contact in site.data.index.contact %}
+		<div class="card contact">
+			<div>
+				<div class="name">{{contact.name}}</div>
+				<b>
+					{{contact.designation}}
+				</b>
+				<br><br>
+				<p class="center-all">
+					<img src="/assets/images/icons/email.png" style="height:12px;margin-right:10px">
+					<b>
+						{{contact.email}}
+					</b>
+				</p>
+				{% if contact.whatsapp %}
+					<p class="center-all">
+						<img src="/assets/images/icons/whatsapp.png" style="height:15px;margin-right:10px">
+						<b>
+							{{contact.whatsapp}}
+						</b>
+					</p>
+				{% endif %}
 			</div>
-			<div class="card" style="height:120px;width:120px;border-radius:100px;position:absolute;top:-0px;right:-10vh;background-image: url('http://localhost:4000/assets/images/rihan-khan-suri-tpo-jamia-miilia-islamia.png');background-size: contain;background-position: center;background-repeat: no-repeat;">
+			<div
+				style="height:120px;width:120px;border-radius:100px;position:absolute;top:-0px;right:-10vh;background-image: url('http://localhost:4000/assets/images/rihan-khan-suri-tpo-jamia-miilia-islamia.png');background-size: contain;background-position: center;background-repeat: no-repeat;">
 			</div>
 		</div>
+		{% endfor %}
 	</div>
-	<div class="col s12 l6 offset-l1">
-		<h4 class="right">Reach us</h4>
-			<iframe width="100%" height="100%" id="map" style="margin-left:auto;margin-right:auto" id="gmap_canvas" src="https://maps.google.com/maps?q=jamia%20millia&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+	<div class="col s12 l5 push-l1">
+		<h2 class="right">Reach us</h4>
+			<iframe width="100%" height="100%" id="map" style="margin-left:auto;margin-right:auto" id="gmap_canvas"
+				src="https://maps.google.com/maps?q=jamia%20millia&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+				scrolling="no" marginheight="0" marginwidth="0"></iframe>
 	</div>
 </div>
 <script>
-document.getElementById("map").height=document.getElementById("contact1").clientHeight*2+20+"px";
-</script>
-	
+	document.getElementById("map").height = document.getElementsByClassName("contact")[0].clientHeight * 2 + 20 + "px";
+</script> -->
+
+<div id="contact" class="section">
+	<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<h2>
+					Contact us
+				</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12 l6">
+				<p style="font-size: 1.5rem">
+					Dr. Rihan Khan Suri, <br>
+					Training & Placement Officer <br>
+					University Placement Cell <br>
+					125, Faculty of Engineering & Technology Building <br>
+					Jamia Millia Islamia, New Delhi-ll0025 <br> <br>
+					Phone Nos. <a href="tel:+258026989106">26989106</a> (D) <a href="tel:+258126981717">26981717</a>
+					<br>
+					Extn.: 2580/81, <br>
+				</p>
+			</div>
+			<div class="col s12 l6">
+				<p style="font-size: 1.5rem">
+					Mailing addesses <br><br>
+
+					<a href="mailto:upc@jmi.ac.in">
+						University Placement Cell: upc@jmi.ac.in
+					</a>
+					<br>
+					<a href="mailto:rsuri@jmi.ac.in">
+						TPO: rsuri@jmi.ac.in
+					</a>
+					<br>
+				</p>
+			</div>
+		</div>
+
+		<div id="ask-for-assistance-modal" class="modal white">
+			<div class="modal-content">
+				<h3>
+					Questions for us?
+				</h3>
+				<div class="row">
+					<form class="col s12" submit="https://script.google.com/macros/s/AKfycbwRj5x_BwJNCSTlSIxhPhDYEobDjdewtMsvJR3Y6PY3CQ99IrEH/exec" method="POST" name="contact-sheet-form">
+						<div class="row">
+							<div class="input-field col s12">
+								<input id="Name" name="Name"  type="text" class="validate" required>
+								<label for="Name">Your Name</label>
+							</div>
+							<div class="input-field col s6">
+								<input id="Email" name="Email" type="email" class="validate" required>
+								<label for="Email">Email</label>
+							</div>
+							<div class="input-field col s6">
+								<input id="ContactNumber" name="ContactNumber" type="text" class="validate">
+								<label for="ContactNumber">Contact Number</label>
+							</div>
+							<div class="input-field col s12">
+								<textarea id="Question" name="Question" class="materialize-textarea"></textarea>
+								<label for="Question">Question</label>
+							</div>
+							<div class="col s12">
+									<div href="#!" class="button black center button-normal">
+											<button type="submit" class="white-text">
+												Submit
+											</button>
+									</div>
+							</div>
+							
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- <div class="modal-footer">
+
+			</div> -->
+		</div>
+		<div class="row center-all">
+			<div href="#!" class="button black center">
+				<a href="#ask-for-assistance-modal" class="white-text modal-trigger">
+					Ask for assitance
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="reach-us" class="">
+	<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<h2>
+					Reach us
+				</h2>
+			</div>
+		</div>
+	</div>
+	<iframe width="100%" height="320px" id="map" style="margin-left:auto;margin-right:auto" id="gmap_canvas"
+		src="https://maps.google.com/maps?q=university%20placement%20cell&t=&z=13&ie=UTF8&iwloc=&output=embed"
+		frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+</div>

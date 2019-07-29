@@ -1,0 +1,23 @@
+.contact.card {
+    border-radius: 20px;
+    min-height: 130px;
+    padding: 0px 0px 0px 15px;
+}
+
+.contact.card>div {
+    padding: 0px 0px 0px 15px;
+}
+
+.contact.card>div p {
+    margin-bottom: 0px;
+    display: inline-block;
+}
+
+.contact.card>div h4 {
+    margin-bottom: 0;
+}
+
+.contact.card .name{
+    font-size: 2rem;
+    font-weight: 700;
+}

@@ -1,11 +1,16 @@
 ---
 ---
+@import 'fonts';
+@import 'materialize/materialize';
+@import 'grid-min';
+
+// @import 'grid';
 @import 'nav';
 @import 'index/landing';
 
 * {
     box-sizing: border-box;
-    margin: 0;
+    // margin: 0;
     font-weight: 300;
     font-family: 'Nunito', sans-serif;
 }
@@ -82,7 +87,7 @@ h3 {
 }
 
 h1{
-    font-size: 3.5rem !important;
+    font-size: 3rem !important;
 }
 h2 {
     font-size: 3rem !important;
@@ -102,17 +107,42 @@ h3 {
 }
 
 .button {
-    padding: 10px 15px;
+    padding: 15px 20px;
     font-weight: 400;
-    margin: 10px;
+    margin: 10px 30px;
     display: inline-block;
     text-align: center;
+    transition: 0.3s;
+}
+.button-normal a{
+    font-size: 1rem !important;
+    padding: 10px 15px;
 }
 
-.button a{
+.button a, button{
     font-weight: 700;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
+}
+.button button{
+    background-color: transparent;
+    border: 0;
+}
+
+.button.black:hover{
+    background-color: #eeeeee !important;
+    transform: scale(1.25, 1.25);
+}
+.button.black:hover .white-text{
+    color: black !important;
+}
+
+.button.white:hover{
+    background-color: #222222 !important;
+    transform: scale(1.25, 1.25);
+}
+.button.white:hover .black-text{
+    color: white !important;
 }
 
 .bg-img {

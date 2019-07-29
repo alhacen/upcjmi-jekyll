@@ -1,5 +1,5 @@
-$bg-color: #fff;
-$height: 50;
+$bg-color: rgba(256, 256, 256, 0.95);
+$height: 64;
 
 header {
     position: fixed;
@@ -7,9 +7,12 @@ header {
     width: 100vw;
 }
 @media screen and (min-width: 992px) {
+    nav_bar {
+        background-color: #ffffff00;
+    }
     nav {
-        opacity: 0.90;
-        background-color: $bg-color;
+        // opacity: 0.90;
+        background-color: $bg-color !important;
         height: #{$height}px;
         border-radius: #{$height}px;;
         margin-top: 20px !important;
