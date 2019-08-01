@@ -29,7 +29,7 @@ nav .brand-logo {
     padding-left: 25px;
     color: black;
 }
-nav ul a, li {
+nav ul a, nav ul li {
     color: black !important;
     height: #{$height}px;
     display: table-cell;
