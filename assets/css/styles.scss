@@ -1,8 +1,6 @@
 ---
 ---
 @import 'fonts';
-@import 'materialize/materialize';
-@import 'grid-min';
 
 // @import 'grid';
 @import 'nav';
@@ -190,3 +188,4 @@ h3 {
         float: right;
     }
 }
+.modal{max-height: 85%;}
