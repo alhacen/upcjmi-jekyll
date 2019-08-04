@@ -152,6 +152,18 @@ h3 {
     min-height: 100vh;
 }
 
+.badges>div{
+    background-image: url('/assets/images/badges/BADGE.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding: 20px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    height: 200px;
+    text-align: center;
+}
+
 @media only screen and (max-width : 601px) {
 
     h1,
