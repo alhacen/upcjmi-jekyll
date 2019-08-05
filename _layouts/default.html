@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 	{% include head.html %}
 </head>
+<<<<<<< HEAD
 
 <body>
 	{% include nav/component.html %}
@@ -20,6 +21,30 @@
 		{% include carousel/carousel.js %}
 		{% include modal-init.js %}
 	</script>
+=======
+<body>
+{% include nav/component.html %}
+<main>
+{{content}}
+</main>
+<footer class="page-footer grey lighten-3" id="contact-us">
+    <div class="footer-copyright">
+        <div class="container grey lighten-2">
+			<p style="color:black;text-align:center;margin:0px">Presented by University Placement Cell, Jamia Millia Islamia</p>
+			<p style="color:black ;text-align: center;margin:0px"><a href="https://github.com/Faisal-Manzer/upcjmi"> This website is open source and you can contribute to it too. 
+			</a>Maintainers:<span id="maintainers"></span></p>
+        </div>
+    </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script>
+{% include nav/nav.js %}
+{% include carousel/carousel.js %}
+{% include modal-init.js %}
+
+</script>
+>>>>>>> f2cc3c48b05a6b3ae85b36cef28ea12477b731de
 </body>
 
 </html>
