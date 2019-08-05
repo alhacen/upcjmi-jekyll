@@ -24,60 +24,7 @@
 {% include nav/nav.js %}
 {% include carousel/carousel.js %}
 {% include modal-init.js %}
-yearRange=[1980,2018];
-format='yyyy-mm-dd';
-  document.addEventListener('DOMContentLoaded', function() {
-    M.updateTextFields();
-    var elems = document.querySelectorAll('.datepicker');
-    var instances = M.Datepicker.init(elems,{yearRange,format});
-    var elems = document.querySelectorAll('select');
-    var instances = M.FormSelect.init(elems);
-  });
-(function() {
-	function toJSONString( form ) {
-		var obj = {};
-		var elements = form.querySelectorAll( "input, select, textarea" );
-		for( var i = 0; i < elements.length; ++i ) {
-			var element = elements[i];
-			var name = element.name;
-			var value = element.value;
 
-			if( name ) {
-				obj[ name ] = value;
-			}
-		}
-
-		return JSON.stringify( obj );
-	}
-
-	document.addEventListener( "DOMContentLoaded", function() {
-		var form = document.getElementById( "test" );
-		//var output = document.getElementById( "output" );
-		form.addEventListener( "submit", function( e ) {
-			e.preventDefault();
-			var json = toJSONString( this );
-			alert(json);
-
-		}, false);
-
-	});
-
-})();
-function upload_image(){
-	previewFile();
-}
-function previewFile() {
-  var preview=document.getElementById("preview_img");
-  var file    = document.getElementById('img_file').files[0];
-  var reader  = new FileReader();
-  reader.addEventListener("load", function () {
-    preview.src = reader.result;
-  }, false);
-
-  if (file) {
-    reader.readAsDataURL(file);
-  }
-}
 </script>
 </body>
 </html>
