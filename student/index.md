@@ -67,14 +67,13 @@ FICCI/DMA/AIMA/NHRD/EPSI/CII/PHPCCI/NMAetc.
 2. Organize data base as required.
 3. Sending E-mails, Invitations and follow-ups.
 4. Finalizing the dates of companies in consultation of teacher-placement coordinators and
-Training & Placement Ofcer.
-5. Meeting with Training & Placement Ofcer every week.
+Training & Placement Oficer.
+5. Meeting with Training & Placement Oficer every week.
 6. To prepare placement brochures of the departments.
 7. To inform students about campus drives and other placement events.
-8. Pre-nal year students will work for nal year students.
-9. Final year students will work for pre-nal year students i.e. Internships, Projects, Industrial Visits,
+8. Pre-final year students will work for final year students.
+9. Final year students will work for pre-fnal year students i.e. Internships, Projects, Industrial Visits,
 CV validation etc.
 10. Maintain alumni database.
 11. Dress Code.
-
 
