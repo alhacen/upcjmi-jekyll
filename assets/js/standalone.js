@@ -69,7 +69,7 @@ function select_year(year){
             var json = toJSONString( this );
             //alert(json);
             console.log(json);
-            postData("http://api.alhacen.cf/projects/upcjmi/server/index.php?update_profile",jsson)
+            postData("http://api.alhacen.cf/projects/upcjmi/server/index.php?update_profile",json)
             //.then(data => console.log(data)) // JSON-string from `response.json()` call
             .then(function(data) {if(data.data=="profile updated successfully"){location.href="#!home";alert(data.data)}})
             .catch(error => console.error(error));
