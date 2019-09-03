@@ -11,12 +11,12 @@ carousel:
 ## Applications open for
 <div class="">
     <div href="#!" class="button black center">
-        <a href="register/internship/" class="white-text">
+        <a href="#!" class="white-text">
             Internship
         </a>
     </div>
     <div href="#!" class="button black center">
-        <a href="register/placement/" class="white-text">
+        <a href="#!" class="white-text">
             Placement
         </a>
     </div>
@@ -26,13 +26,17 @@ carousel:
         </a>
     </div>
 </div>
+<div id="loading_scren" style="position: fixed;z-index:999999;width:100%;height:100%;text-align:center;background-color:red!important;display:none">
+    <div style="position: fixed; top: 50%; left:50%; transform: translate(-50%, -50%);width:100%;height:100%" class="grey lighten-4"><div class="loader" style="position: fixed; top: 50%; left:50%; transform: translate(-50%, -50%);"></div></div>
+    <!---->
+</div>
 <br>
 ## ROLE OF PLACEMENT CELL
 ### Role of Training & Placement Officer
 1. To establish a smooth campus placement process in university.
 2. Sending invitations to chief executives/Sr. professionals/HR Heads etc.
 3. To attend the various programmes organized by Industries/ Association of Industries/
-FICCI/DMA/AIMA/NHRD/EPSI/CII/PHPCCI/NMAetc.
+FICCI/ DMA/ AIMA/ NHRD/ EPSI/ CII/ PHPCCI/ NMAetc.
 4. To visit companies to meet top executives if required.
 5. To issue letters for internship and accepted offers.
 6. To coordinate with Dean/HOD’s/Directors of Centers and Teacher-Placement Coordinators.
@@ -76,4 +80,18 @@ Training & Placement Oficer.
 CV validation etc.
 10. Maintain alumni database.
 11. Dress Code.
-
+<script src="https://www.google.com/recaptcha/api.js?render=6LcDeLUUAAAAAPiNdho7enWVLBz7R-zddkRxG-NX"></script>
+<script>
+function get_recaptcha_token(callback){
+    grecaptcha.execute('6LcDeLUUAAAAAPiNdho7enWVLBz7R-zddkRxG-NX').then(function(token) {
+        grecaptchatoken=token;
+        console.log(token);
+        callback()
+    });;
+    //
+}
+grecaptcha.ready(function() {
+    get_recaptcha_token(fun)
+});
+//setTimeout(function(){fun()},3000)
+</script>

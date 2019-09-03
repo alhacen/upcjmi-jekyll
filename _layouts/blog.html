@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <div id="landing">
     <div class="holder">
         <div id="carosusel">
@@ -23,6 +22,35 @@ layout: default
                         {{page.sub-heading}}
                     </span>
                 </h1>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="auth_form">
+        <div id="auth_loading_scren" class="card"><div class="card-content center" >Loading..</div></div>
+        <div id="user_dash_col" class="card"><div class="card-content center" ><p>Welocme <span id="auth_user_greeting"></span><a href="http://127.0.0.1:4000/student/register/internship/"><br>profile</a></p></div></div>
+        <div class="card" id="auth_form_col">
+            <div class="card-content" >
+                <div class="row" style="text-align:center">
+                    <div class="input-field col s12">
+                        <input id="auth_form_email_input" type="text" class="validate" autocomplete="off">
+                        <label class="active" for="auth_form_email_input">Email</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="auth_form_password_input" type="password" class="validate" autocomplete="off">
+                        <label class="active" for="auth_form_password_input">Password</label>
+                    </div>
+                    <div class="input-field col s12" id="cnf_input_row" style="display: none">
+                            <input id="auth_form_student_name_input" type="text" class="validate" autocomplete="off">
+                            <label class="active" for="auth_form_student_name_input">Name</label>
+                    </div>
+                    <p style="text-align:center"><a href="#" class="blue-text">Forget Password</a></p>
+                    <span style="color:red;position:relative;text-align:center" id="auth_msg"></span>
+                </div>
+            </div>
+            <div class="card-action">
+                <a href="#" class="left blue-text" style="padding:10px" onclick="toggle_form(this)" id="toggle_form_btn">register</a>
+                <a href="#" class="right btn disabled_btn" id="auth_form_submit" onclick="submit_auth_form(this)">login</a>
+                <div style="clear:both"></div>
             </div>
         </div>
     </div>

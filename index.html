@@ -39,8 +39,9 @@ carousel: index
 						Jamia Millia Islamia
 					</span>
 				</h1>
+
 			</div>
-			<div class="container show-on-med-and-up" style="margin-bottom: 20px;">
+			<div class="container hide-on-med-and-down" style="margin-bottom: 20px;">
 				<div class=""
 					style="display: flex;align-items: baseline; justify-content: space-between;flex-direction: row;width: 100%;">
 					{% for award in site.data.why-recruit %}
@@ -52,6 +53,13 @@ carousel: index
 							alt="{{award.title}} - recruit from University Placement Cell, Jamia Millia Isalmia">
 					</div>
 					{% endfor %}
+				</div>
+			</div>
+			<div class="row center-all">
+				<div href="student" class="btn-small white center">
+					<a href="student" class="black-text">
+						Job Readiness Program
+					</a>
 				</div>
 			</div>
 		</div>

@@ -189,3 +189,30 @@ h3 {
     }
 }
 .modal{max-height: 85%;}
+.student_cpi{display:none;}
+@media screen and (min-width: 900px) {
+    #auth_form{position: absolute;z-index:1;right:50px;top:50px;width:400px;}
+}
+#user_dash_col{display:none;}
+.grecaptcha-badge {display:none}
+.disabled_btn{pointer-events: none; cursor: default;background-color: #cccccc;}
+.loader {
+    border: 6px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 6px solid #3498db;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: spin .5s linear infinite;
+    animation: spin .5s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  

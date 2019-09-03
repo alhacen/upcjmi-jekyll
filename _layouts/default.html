@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 	{% include head.html %}
 </head>
-
 <body>
 	{% include nav/component.html %}
 	<main>
@@ -14,12 +12,40 @@
 
 	{% include _footer.html %}
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script src="/assets/js/standalone.js"></script>
 
 	<script>
+		function _(a){return document.getElementById(a);}	
 		{% include nav/nav.js %}
 		{% include carousel/carousel.js %}
 		{% include modal-init.js %}
-	</script>
+		yearRange=[1980,2018];
+format='yyyy-mm-dd';
+document.addEventListener('DOMContentLoaded', function () {
+    var models = document.querySelectorAll('.modal');
+    var modelsInstances = M.Modal.init(models);
+    var elems = document.querySelectorAll('.datepicker');
+    var instances = M.Datepicker.init(elems,{yearRange,format});
+    var elems = document.querySelectorAll('select');
+	var instances = M.FormSelect.init(elems);
+});
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwRj5x_BwJNCSTlSIxhPhDYEobDjdewtMsvJR3Y6PY3CQ99IrEH/exec';
+const form = document.forms['contact-sheet-form']
+
+form.addEventListener('submit', e => {
+e.preventDefault()
+fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+	.then(response => {
+		console.log('Success!', response);
+		M.toast({html: 'Thankyou for contacting us'})
+	})
+	.catch(error => {
+		console.error('Error!', error.message);
+		M.toast({html: 'Unknown error occured'});
+
+	})
+})
+</script>
 </body>
 
 </html>
