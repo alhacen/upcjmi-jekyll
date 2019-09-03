@@ -41,13 +41,13 @@
             <!-- -->
          </div>
          <br>
-         <a class="waves-effect waves-grey black-text"  style="width:100%;height:40px">
+         <!-- <a class="waves-effect waves-grey black-text"  style="width:100%;height:40px">
             <div id="user_dp" class="row">
                <div class="col s12 left-align">
                   <p onclick="active_profile(1)"  style="margin:6px;text-decoration:under">Setting</p>
                </div>
             </div>
-        </a>
+        </a> -->
             <div id="hidden_profile_settings_1" style="padding-left:30px;display:none;height:0px">
                <a class="waves-effect waves-grey black-text" href="#!profile_update" style="width:100%;height:40px">
                   <div id="user_dp" class="row">
@@ -70,14 +70,14 @@
                      </div>
                   </div>
                </a> -->
-            </div> 
-         <a class="waves-effect waves-grey black-text" href="#" style="width:100%;height:40px">
-            <div id="user_dp" class="row">
-               <div class="col s12 left-align">
-                  <p style="margin:6px;text-decoration:under">Company Available</p>
-               </div>
             </div>
-         </a>
+                <a class="waves-effect waves-grey black-text" href="#!profile_update" style="width:100%;height:40px">
+                    <div id="user_dp" class="row">
+                        <div class="col s12 left-align">
+                            <p style="margin:6px;text-decoration:under">Profile</p>
+                        </div>
+                    </div>
+                </a> 
       </div>
       <div class="col s12 m12 l8" id="main">
         <div id="home" class="page">

@@ -25,9 +25,10 @@ document.addEventListener('DOMContentLoaded', function () {
     var models = document.querySelectorAll('.modal');
     var modelsInstances = M.Modal.init(models);
     var elems = document.querySelectorAll('.datepicker');
-    var instances = M.Datepicker.init(elems,{yearRange,format});
+    var instances = M.Datepicker.init(elems,{yearRange,format,onClose: function(){alert} });
     var elems = document.querySelectorAll('select');
 	var instances = M.FormSelect.init(elems);
+	//onClose
 });
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwRj5x_BwJNCSTlSIxhPhDYEobDjdewtMsvJR3Y6PY3CQ99IrEH/exec';
 const form = document.forms['contact-sheet-form']
@@ -45,7 +46,7 @@ fetch(scriptURL, { method: 'POST', body: new FormData(form)})
 
 	})
 })
+//document.getElementsByTagName("BODY")[0].style.overflow=""
 </script>
 </body>
-
 </html>

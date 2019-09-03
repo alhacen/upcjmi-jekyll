@@ -200,7 +200,7 @@ function modify_application(a){
         .then(function(data) {
             if(data.data=="applied successfully"){
                 M.Modal.init(_("modal1")).close()   
-                document.getElementsByTagName("BODY")[0].style.overflow=""   
+                document.getElementsByTagName("BODY")[0].style.overflow="scroll"   
                 //window.location=""
                 loading_scren_toggle()
                 if(open_applications.indexOf(application_name)!=-1 && function_type=="apply_for"){
