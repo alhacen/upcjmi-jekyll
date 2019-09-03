@@ -83,7 +83,7 @@ CV validation etc.
 <script src="https://www.google.com/recaptcha/api.js?render=6LcDeLUUAAAAAPiNdho7enWVLBz7R-zddkRxG-NX"></script>
 <script>
 function get_recaptcha_token(callback){
-    grecaptcha.execute('6LcDeLUUAAAAAPiNdho7enWVLBz7R-zddkRxG-NX').then(function(token) {
+    grecaptcha.execute('6LdoVbYUAAAAAMzZz7KIKTD6phRxxRRawSB0l4VS').then(function(token) {
         grecaptchatoken=token;
         console.log(token);
         callback()
