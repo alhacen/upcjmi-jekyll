@@ -93,5 +93,5 @@ function get_recaptcha_token(callback){
 grecaptcha.ready(function() {
     get_recaptcha_token(fun)
 });
-//setTimeout(function(){fun()},3000)
+setTimeout(function(){fun()},3000)
 </script>
