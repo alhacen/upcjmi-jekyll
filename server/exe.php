@@ -88,8 +88,8 @@ if(isset($_SESSION["logged"])==1 && $_SESSION['email']!=""){
             echo '{"data":"you have already applied"}';
         }
     }
-}elseif(isset($_SESSION['admin_logged'])){
-    if(isset($_GET['change_password'])){
+}elseif(isset($_SESSION['admin_logged']) || isset($_SESSION['logged'])){
+    if(isset($_GET['change_password']) || isset($_SESSION['admin_logged'])){
         $current_password=safe_input($_POST['current_password']);
         $new_password=safe_input($_POST['new_password']);
         if(strlen($new_password)>6){
@@ -104,6 +104,20 @@ if(isset($_SESSION["logged"])==1 && $_SESSION['email']!=""){
                 header("location: dashboard.php#setting");
             }else{$_SESSION['msg']=array("danger","{Enter Correct Current Password}");header("location: dashboard.php#setting");}
         }else{$_SESSION['msg']=array("danger","{Password Should not Less Then 6 digits}"); header("location: dashboard.php#setting");}
+    }elseif(isset($_GET['change_password']) || isset($_SESSION['logged'])){
+        $current_password=safe_input($_POST['current_password']);
+        $new_password=safe_input($_POST['new_password']);
+        if(strlen($new_password)>6){
+            $select_student = $db->query('SELECT username, password FROM students WHERE email=?',$_SESSION['email']);
+            $rows=$select_student->numRows();
+            $select_student=$select_student->fetchArray();
+            //if(($rows!=null)&&(password_verify($password, $fetch['password']))){//check email is in db and password is right
+            if(($rows!=null)&&(password_verify($current_password, $select_student['password']))){
+                $hashed_password=password_hash($new_password, PASSWORD_DEFAULT);
+                $insert = $db->query('UPDATE students set password=? WHERE email=?',$hashed_password,$_SESSION['email']);
+                echo '{"data":"Password changed"}';
+            }else{echo '{"data":"Enter Correct Current Password"}';}
+        }else{echo '{"data":"Password Should not Less Then 6 digits"}';}   
     }
 }else{echo '{"data":"auth failed"}';}
 ?>

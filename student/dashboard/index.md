@@ -18,12 +18,12 @@ layout: dashboard
          </ul>
       </div>
    </nav>
-   <div id="body" class="row card white" style="margin-top:0;min-height:100%;">
-      <div class="col s12 m3 l3 center hide-on-small-only hide1 card1" style="height:100%;" id="side-nav">
+   <div id="body" class="row card white" style="margin-top:0;min-height:100vh;">
+      <div class="col s12 m3 l3 center hide-on-small-only hide1 card1" style="height:100vh;" id="side-nav">
          <div id="side_user_setting_1">
             <a class="waves-effect waves-grey black-text" href="#!home" style="width:100%;height:55px">
                <div id="user_dp" class="row">
-                  <div class="col s4 "><img class="circle" id="dp_desktop" src="https://app-1494486514.000webhostapp.com/EmphasisO-SIF-Fronten/images/dp.jpg"></div>
+                  <div class="col s4 "><img class="circle" id="dp_desktop" src="#"></div>
                   <div class="col s7 left-align">
                      <p style="margin-top:6px"><span id="student_name"></span> <br><span style="font-size:11px"></span></p>
                   </div>
@@ -68,9 +68,36 @@ layout: dashboard
                             <p style="margin:6px;text-decoration:under">Profile</p>
                         </div>
                     </div>
-                </a> 
+                </a>
+                <a class="waves-effect waves-grey black-text sidenav-close" href="#!change_password" style="width:100%;height:40px">
+                    <div class="row">
+                        <div class="col s12 left-align">
+                        <p style="margin:6px;text-decoration:under">Change Password</p>
+                        </div>
+                    </div>
+                </a>
       </div>
       <div class="col s12 m12 l8" id="main">
+        <div id="change_password" class="page">
+            <div class="row">
+                <div class="col s12 l6 m6 offset-l3 offset-m3">
+                    <form>
+                        <div class="row">
+                            <div class="input-field col s12 ">
+                            <input placeholder="curernt password" id="curernt_password" name="current_password" type="password" class="validate">
+                            </div>
+                            <div class="input-field col s12">
+                            <input placeholder="new password" id="new_password" type="password" name="new_password" class="validate">
+                            </div>
+                            <div class="input-field col s12">
+                            <input placeholder="confirm new password" id="confirm_new_password" name="new_password" type="password" class="validate">
+                            </div>
+                            <p class="center"><input type="button" onclick="change_password()" value="change" class="btn"></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <div id="home" class="page">
             <div class="row">
                 <div class="col s12 l6">
@@ -281,7 +308,7 @@ layout: dashboard
       <div id="side_user_setting_2" class="grey lighten-3">
          <a href="#!home" class="sidenav-close waves-effect waves-grey black-text" style="width:100%;height:55px">
             <div id="user_dp" class="row">
-               <div class="col s4 "><img class="circle" id="dp_mobile" src="https://app-1494486514.000webhostapp.com/EmphasisO-SIF-Fronten/images/dp.jpg"></div>
+               <div class="col s4 "><img class="circle" id="dp_mobile" src="#"></div>
                <div class="col s7 left-align">
                   <p style="margin-top:6px"><span id="student_name_mobile"></span> <br /><span style="font-size:11px"></span></p>
                </div>
@@ -296,7 +323,14 @@ layout: dashboard
             </div>
          </div>
       </a>
-      <a class="waves-effect waves-grey black-text sidenav-close" href="#" style="width:100%;height:40px">
+      <a class="waves-effect waves-grey black-text sidenav-close" href="#!change_password" style="width:100%;height:40px">
+         <div class="row">
+            <div class="col s12 left-align">
+               <p style="margin:6px;text-decoration:under">Change Password</p>
+            </div>
+         </div>
+      </a>
+      <a class="waves-effect waves-grey black-text sidenav-close" onclick="sudoKill()" style="width:100%;height:40px">
          <div class="row">
             <div class="col s12 left-align">
                <p style="margin:6px;text-decoration:under">Log Out</p>
@@ -305,7 +339,7 @@ layout: dashboard
       </a>
    </ul>
    <div id="loading_scren" style="position: fixed;z-index:999999;width:100%;height:100%;text-align:center;background-color:red!important;display:none">
-        <div style="position: fixed; top: 50%; left:50%; transform: translate(-50%, -50%);width:100%;height:100%" class="grey lighten-4"><div class="loader" style="position: fixed; top: 50%; left:50%; transform: translate(-50%, -50%);"></div></div>
+        <div style="position: fixed; top: 50%; left:50%; transform: translate(-50%, -50%);width:100%;height:100%" class="grey lighten-4"><div class="loader" style="position: fixed; top: 50%; left:50%; transform: translate(-50%, -50%);margin-left:-25px"></div></div>
     </div>
 <div id="modal1" class="modal" style="overflow:hidden">
     <div class="modal-content">

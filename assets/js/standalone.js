@@ -6,6 +6,7 @@ before debugging read this, ploxx
 //(window.location.origin)=="http://127.0.0.1:4000"?window.location="http://localhost:4000":""//delete before deploy
 //http://127.0.0.1/upcjmi/server/exe.php
 var grecaptchatoken;
+var max_image_size=400;
 function string_bw__word(string, w1, w2){
     return string.split(w1).pop().split(w2)[0];
 }
@@ -28,7 +29,12 @@ function previewFile() {
     var file    = document.getElementById('img_file').files[0];
     var reader  = new FileReader();
     reader.addEventListener("load", function () {
-        preview.src = reader.result;
+        stringLength=reader.result.length
+        //console.log(stringLength)
+        var sizeInKb = 4 * Math.ceil((stringLength / 3))*0.5624896334383812/1000;
+        if(sizeInKb<max_image_size){
+            preview.src = reader.result;
+        }else{alert("Image Should Be less then "+max_image_size+"KB")}
     }, false);
     if (file) {
         reader.readAsDataURL(file);
@@ -69,10 +75,21 @@ function select_year(year){
             var json = toJSONString( this );
             //alert(json);
             console.log(json);
-            postData("http://api.alhacen.cf/projects/upcjmi/server/index.php?update_profile",json)
-            //.then(data => console.log(data)) // JSON-string from `response.json()` call
-            .then(function(data) {if(data.data=="profile updated successfully"){location.href="#!home";alert(data.data)}})
-            .catch(error => console.error(error));
+            var stringLength=_("preview_img").src.length
+            var sizeInKb = 4 * Math.ceil((stringLength / 3))*0.5624896334383812/1000;
+            if(sizeInKb<max_image_size){
+                loading_scren_toggle()
+                postData("http://api.alhacen.cf/projects/upcjmi/server/index.php?update_profile",json)
+                //.then(data => console.log(data)) // JSON-string from `response.json()` call
+                .then(function(data) {loading_scren_toggle();if(data.data=="profile updated successfully"){
+                    location.href="#!home";alert(data.data);
+                    _("dp_desktop").src=_("dp_mobile").src=document.getElementsByName("preview_img")[0].src;
+                    }else{
+                        alert(data.data)
+                    }
+                })
+                .catch(error => console.error(error));
+            }else{alert("Image Should Be less then "+max_image_size+"KB")}
         }, false);}
     });
 })();
@@ -224,6 +241,21 @@ function toggle_form(a){
     _("cnf_input_row").style.display=(a.innerHTML=="register")?"block":"none"
     a.innerHTML=(a.innerHTML=="register")?"login":"register";
     _("auth_form_submit").innerHTML=(a.innerHTML=="register")?"login":"register";
+}
+function change_password(){
+    if(_('new_password').value==_('confirm_new_password').value && _('new_password').value!=""){
+        data="current_password="+_("curernt_password").value+"&new_password="+_("new_password").value
+        postData("http://api.alhacen.cf/projects/upcjmi/server/exe.php?change_password",data)
+        .then(function(data) {
+        })
+        .then(error => console.error(error))
+      }else if(_('new_password').value==""){
+        alert("enter Password")
+      }else{
+        alert("Confirm Password and new Password did not match")
+        _('new_password').value=_('confirm_new_password').value=""
+      }
+
 }
 /*	
 function make_post_request(url,data,callback) {

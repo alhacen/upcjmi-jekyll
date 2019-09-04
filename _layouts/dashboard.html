@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 current_page="";
-var pages=["home","profile_update","profile_options"];
+var pages=["home","profile_update","profile_options","change_password"];
 var functions=["apply_for","application_cancel_for"];
 function change_page() {
     if(pages.includes(location.hash.substr(2)) || location.hash=="" || location.hash=="#!"){
@@ -106,7 +106,7 @@ loading_scren_toggle()
     .disabled_btn{pointer-events:none;cursor:default;background-color:#cccccc}
 .cursor_pointer{cursor:pointer;}
 .page{display:none;}
-#main{padding:0 25 0 25px}
+#main{padding-left:25px}
 .upc_greeting{font-size:30px}
 .card1{border:1.5px #e6e6e6 solid;height:200px; -webkit-box-shadow: 2px 2px 2px 0px rgba(204, 204, 204,.1);. -moz-box-shadow: 50px 51px}
 @media screen and (max-width: 381px) {
@@ -121,7 +121,7 @@ loading_scren_toggle()
     .img_col img{width:100px;height:auto;margin-right:auto;margin-left:auto}
     .img_col{margin-right:auto;margin-left:auto}
     .show1 a{height:55px!important}	
-    .user-card1{width:100%}
+    .user-card1{width:100vh}
     .text1{width:80%}
     #available_company{padding-left:10px;padding-right:10px;}
 }
@@ -140,7 +140,7 @@ loading_scren_toggle()
     /*#side-nav{display:none}*/
     .hide1{display:none}
     .show1{display:block}
-    .user-card1{width:100%}
+    .user-card1{width:100vh}
 }
 hr{box-sizing:content-box;height:0;overflow:visible}
 hr{border:0;border-top:1px solid #eee;margin:20px 0}
