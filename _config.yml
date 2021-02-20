@@ -1,5 +1,5 @@
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://alhaqhassan.github.io/upcjmi" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: pretty
 
 # Build settings
