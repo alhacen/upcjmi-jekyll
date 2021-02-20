@@ -151,7 +151,7 @@ h3 {
 }
 
 .badges>div{
-    background-image: url('/assets/images/badges/BADGE.png');
+    background-image: url('{{ site.baseurl }}/assets/images/badges/BADGE.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;

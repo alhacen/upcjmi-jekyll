@@ -5,7 +5,7 @@ layout: dashboard
       <div class="nav-wrapper white">
          <a onclick="window.location=window.location.origin+window.location.pathname" class="cursor_pointer brand-logo">
          <b class="center-hv">
-         <img src="/assets/images/jamia-logo.png" alt="" class="logo-img">
+         <img src="{{ site.baseurl }}/assets/images/jamia-logo.png" alt="" class="logo-img">
          <span class="upc_greeting" style="color:#333333;">
          &nbsp;University Placement Cell
          </span>

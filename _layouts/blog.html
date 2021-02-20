@@ -7,7 +7,7 @@ layout: default
             <div class="carousel carousel-slider" style="position:absolute;min-height: 75vh;">
                 {% for image in page.carousel %}
                 <span class="carousel-item">
-                    <div class="bg-img" style="background-image: url('/assets/images/carousel/{{image}}');"></div>
+                    <div class="bg-img" style="background-image: url('{{ site.baseurl }}/assets/images/carousel/{{image}}');"></div>
                 </span>
                 {% endfor %}
             </div>
