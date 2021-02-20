@@ -1,4 +1,4 @@
-baseurl: "/upcjmi" # the subpath of your site, e.g. /blog
+baseurl: "/upcjmi-jekyll" # the subpath of your site, e.g. /blog
 url: "https://alhaqhassan.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: pretty
 
